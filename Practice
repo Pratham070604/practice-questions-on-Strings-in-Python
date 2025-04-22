@@ -1,0 +1,134 @@
+'''Write a program to reverse a string using slicing.
+
+a = "Python Programming"
+print(a[::-1])
+'''
+
+''' Check if the string "madam" is a palindrome.
+a = "madams"
+if a == a[::-1]:
+    print(True)
+else:
+    print(False)
+'''
+
+''' Write a program to remove all vowels from a string.
+a = "Python is easy to learn"
+vowels = 'aeiouAEIOU'
+result = ''
+
+for i in a:
+    if i not in vowels:
+        result += i
+
+print(result)
+'''
+
+'''Write a function that counts the number of words in a given sentence.
+a = "Python is easy to learn"
+
+def count_words(s):
+    b = s.split()
+    print(len(b))
+
+count_words(a)
+'''
+
+
+'''Write a function to find the longest word in a string.
+a = "Python is easy to learn"
+
+def Longest_word(s):
+    b = s.split()
+    c= " "
+    for i in b:
+        if len(i) >= len(c):
+            c=i
+    print(c)
+
+Longest_word(a)
+'''
+
+''' Remove duplicate word from a string.
+
+a = "Python is easy is  to learn. I am Smooth"
+
+def Duplicate_word(s):
+    b = s.lower().split()
+    c=[]
+
+    for char in b:
+        if char not in c:
+            c.append(char)
+    
+    print(' '.join(c).capitalize())
+
+Duplicate_word(a)
+'''
+
+'''Write a function to check if two strings are anagrams.
+
+def anagrams(s1,s2):
+    a = s1.replace(" ","").lower()
+    b = s2.replace(" ","").lower()
+
+    return sorted(a) == sorted(b)
+
+a = "listen"
+b = "silent"
+print(anagrams(a,b))
+'''
+
+''' Remove duplicate characters from a string.
+
+a = "Python is easy is p to learn. I am Smooth"
+
+def Duplicate_char(s):
+    b = s.lower().replace(" ","")
+    c=[]
+
+    for char in b:
+        if char not in c:
+            c.append(char)
+    
+    print(''.join(c))
+
+Duplicate_char(a)
+'''
+
+'''Write a Python program to capitalize the first letter of each word in a string (like a title).
+
+#Manual Method
+def title(s):
+    a = s.split()
+    c=[]
+    for i in a:
+        c.append(i.capitalize())
+    print(" ".join(c))
+
+#Shortcut method using title()
+# def title(s):         
+#     print(a.title())
+
+a = "Python provides a variety of built-in string methods and functions to manipulate to and process"
+title(a)
+'''
+
+'''Write a Python program to compress a string using the counts of repeated characters.
+Example: "aaabbcccc" ➝ "a3b2c4"
+
+a = "Python provides a variety of built-in string methods and functions to manipulate to and process"
+
+def compress(s):
+    a = s.lower().replace(" ","")
+    b=[]
+    result = ''
+
+    for i in a:
+        if i not in b:
+            b.append(i)
+            result+= i + str(a.count(i))
+    print(result)
+
+compress(a)
+'''
